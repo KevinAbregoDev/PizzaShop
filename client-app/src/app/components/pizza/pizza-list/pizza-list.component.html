@@ -1,0 +1,8 @@
+<h2>Pizza List</h2>
+<div *ngFor="let pizza of pizzas$ | async">
+    <div class="pizza-item">
+        <h3>{{ pizza.name }}</h3>
+        <p>Price: ${{ pizza.price }}</p>
+        <button (click)="viewDetails(pizza.id)">View Details</button>
+      </div>
+</div>
